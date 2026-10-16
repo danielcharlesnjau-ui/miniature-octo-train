@@ -1,0 +1,248 @@
+/* 1. RESET NA MSINGI WA RANGI (Global Styles) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #c85dd8, #7284e7); /* Lavender laini ya kifalme */
+    color: #4a148c; /* Purple iliyokoza kwa ajili ya maandishi yasomeke vizuri */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* 2. SEHEMU YA JUU (Header / Profile) */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #b0bec5; /* Rangi ya Silver kwenye heri ya picha */
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.2);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4a148c;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #7b1fa2;
+    font-style: italic;
+}
+
+/* 3. MUUNDO WA KADI (Links / Cards Container) */
+.links-container {
+    width: 100%;
+    max-width: 450px; /* Inakaa vizuri kwenye simu na kompyuta */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.85); /* Background nyeupe ya kioo */
+    border: 2px solid #cfd8dc; /* Border ya Silver laini */
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease; /* Inafanya mabadiliko ya panya (hover) yawe laini */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effect - Panya ikipita juu ya kadi */
+.card:hover {
+    transform: translateY(-5px); /* Kadi inanyanyuka juu kidogo */
+    border-color: #7b1fa2; /* Border inabadilika kuwa Purple */
+    box-shadow: 0 10px 20px rgba(106, 27, 154, 0.15);
+    background: #ffffff;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    color: #4a148c;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+/* Buttons za Link */
+.card a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #7b1fa2, #4a148c); /* Button ya Purple ya kifalme */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.card a:hover {
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2); /* Inang'aa zaidi panya ikipita */
+}
+
+/* 4. SEHEMU YA CHINI (Footer) */
+footer {
+    margin-top: auto;
+    padding-top: 40px;
+    font-size: 0.85rem;
+    color: #78909c; /* Rangi ya Silver iliyofifia */
+}
+/* 5. UREMBO WA BUTTON YA KUBADILI MANDHARI */
+.theme-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #4a148c;
+    color: #ffffff;
+    border: 2px solid #b0bec5; /* Silver border */
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #7b1fa2;
+    transform: scale(1.05);
+}
+
+/* 6. MANDHARI YA GIZA (DEEP PURPLE & SHINING SILVER) */
+/* 6. MANDHARI YA DHAHABU (GOLD & LAVENDER MODE) */
+body.dark-mode {
+    background: linear-gradient(135deg, #734a9b, #e65deb); /* Lavender background safi na angavu */
+    color: #4c1d95; /* Purple iliyokoza kwa maandishi ya kawaida */
+}
+
+body.dark-mode h1, 
+body.dark-mode .card h3 {
+    color: #6d28d9; /* Purple ya kifalme kwenye vichwa vya habari */
+}
+
+body.dark-mode .tagline,
+body.dark-mode .card p {
+    color: #0c031b; /* Purple ya wastani kwa maelezo */
+}
+
+/* Urembo wa Kadi ukiwa kwenye Modi ya Dhahabu */
+body.dark-mode .card {
+    background: rgba(172, 79, 175, 0.95);
+    border: 3px solid #d97706; /* Border nene ya Dhahabu (Gold) */
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.15); /* Kivuli cha dhahabu laini */
+}
+
+body.dark-mode .card:hover {
+    border-color: #b45309; /* Dhahabu iliyokoza zaidi panya ikipita */
+    box-shadow: 0 10px 25px rgba(217, 119, 6, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Buttons za Link zikiwa kwenye Modi ya Dhahabu */
+body.dark-mode .card a,
+body.dark-mode .submit-btn {
+    background: linear-gradient(135deg, #fbbf24, #d97706); /* Button ya Dhahabu inayong'aa */
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .card a:hover,
+body.dark-mode .submit-btn:hover {
+    background: linear-gradient(135deg, #f59e0b, #b45309); /* Inabadilika kuwa dhahabu iliyokoza */
+}
+
+/* Fomu ya email ikiwa kwenye Modi ya Dhahabu */
+body.dark-mode .form-input {
+    background: #b338be;
+    border: 1px solid #f59e0b;
+    color: #4c1d95;
+}
+
+/* Button kuu ya kubadilisha mandhari */
+body.dark-mode .theme-btn {
+    background: linear-gradient(135deg, #fbbf24, #d97706);
+    color: #ffffff;
+    border-color: #d97706;
+}
+
+/* 7. UREMBO WA KADI YA MAWASILIANO (Contact Form) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    color: #4a148c;
+}
+
+.form-input:focus {
+    border-color: #7b1fa2;
+    box-shadow: 0 0 5px rgba(123, 31, 162, 0.3);
+}
+
+.text-area {
+    resize: none;
+    height: 80px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #7b1fa2, #4a148c);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+}
+
+/* Urembo wa Fomu ukiwa kwenye Modi ya Giza (Dark Mode) */
+body.dark-mode .form-input {
+    background: #260c3d;
+    border-color: #90a4ae;
+    color: #eceff1;
+}
+
+body.dark-mode .form-input::placeholder {
+    color: #b0bec5;
+}
+
+body.dark-mode .submit-btn {
+    background: linear-gradient(135deg, #eceff1, #b0bec5);
+    color: #120024;
+}
